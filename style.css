@@ -1,0 +1,269 @@
+:root {
+  --bg-dark-blue: hsl(226, 43%, 10%);
+  --dark-blue: hsl(235, 46%, 20%);
+  --primary-blue: hsl(246, 80%, 60%);
+  --blue: hsl(235, 34%, 34%);
+  --pale-blue: hsl(236, 100%, 87%);
+  --white: hsl(0, 0%, 100%);
+  --work: hsl(15, 100%, 70%);
+  --play: hsl(195, 74%, 62%);
+  --study: hsl(348, 100%, 68%);
+  --exercise: hsl(145, 58%, 55%);
+  --social: hsl(264, 64%, 52%);
+  --self-care: hsl(43, 84%, 65%);
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+  background-color: var(--bg-dark-blue);
+  font-size: 1.8rem;
+}
+
+.container {
+  width: fit-content;
+  display: flex;
+  margin: 0 auto 2rem auto;
+  padding-top: 2em;
+  gap: 1em;
+}
+
+.box-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1em;
+}
+
+.jeremy-container {
+  width: 22rem;
+}
+
+.jeremy-info {
+  position: relative;
+  background-color: var(--primary-blue);
+  padding: 2rem;
+  border-radius: 9px;
+}
+
+.jeremy-img {
+  width: 6rem;
+  border: 2px solid var(--white);
+  border-radius: 50%;
+  margin-bottom: 3rem;
+}
+
+.report {
+  font-size: 1.2rem;
+  color: var(--pale-blue);
+  margin-bottom: 0.5rem;
+}
+
+.name {
+  color: var(--white);
+  font-weight: 300;
+  font-size: 3.2rem;
+  margin-bottom: 6rem;
+}
+
+.jeremy-btns {
+  background-color: var(--dark-blue);
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  padding: 4rem 2rem 3rem 2rem;
+  margin-top: -2rem;
+  z-index: -1;
+  border-radius: 9px;
+}
+
+.btn {
+  text-decoration: none;
+  color: var(--pale-blue);
+  font-size: 1.4rem;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  color: var(--white);
+}
+
+.box {
+  width: 22rem;
+}
+
+.icon {
+  z-index: -1;
+  /* width: 6rem; */
+  margin-top: -1rem;
+}
+
+.icon-exercise {
+  margin-top: -0.5rem;
+}
+
+.icon-bg {
+  overflow: hidden;
+  border-top-left-radius: 9px;
+  border-top-right-radius: 9px;
+  height: 5rem;
+  text-align: end;
+  padding: 0 2rem;
+}
+
+.icon-bg-work {
+  background-color: var(--work);
+}
+
+.icon-bg-play {
+  background-color: var(--play);
+}
+
+.icon-bg-study {
+  background-color: var(--study);
+}
+
+.icon-bg-exercise {
+  background-color: var(--exercise);
+}
+
+.icon-bg-social {
+  background-color: var(--social);
+}
+
+.icon-bg-self-care {
+  background-color: var(--self-care);
+}
+
+.time-tracking-box {
+  background-color: var(--dark-blue);
+  position: relative;
+  border-radius: 9px;
+  margin-top: -1rem;
+  padding: 2rem;
+  transition: 0.2s;
+}
+
+.time-tracking-box:hover {
+  background-color: var(--blue);
+  cursor: pointer;
+}
+
+.title-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+}
+
+.title-box svg path:hover {
+  fill: var(--white);
+}
+
+.title {
+  color: var(--white);
+  font-weight: 500;
+}
+
+.current-time {
+  font-size: 5rem;
+  color: var(--white);
+  font-weight: 300;
+  margin-bottom: 0.7rem;
+}
+
+.previous-time {
+  font-size: 1.4rem;
+  color: var(--pale-blue);
+  margin-bottom: 0.5rem;
+}
+
+.active {
+  color: var(--white);
+}
+
+.attribution {
+  font-size: 1.4rem;
+  text-align: center;
+  color: var(--blue);
+  font-weight: 400;
+}
+.attribution a {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 950px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .jeremy-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .jeremy-info {
+    width: 100%;
+    z-index: 3;
+  }
+
+  .jeremy-btns {
+    height: 18rem;
+    margin-top: 0;
+    padding: 3rem 9rem;
+    margin-left: -1rem;
+    justify-content: center;
+    z-index: 2;
+  }
+
+  .jeremy-img {
+    margin-bottom: 1rem;
+  }
+
+  .name {
+    margin-bottom: 1rem;
+  }
+}
+
+@media only screen and (max-width: 740px) {
+  .jeremy-container {
+    flex-direction: column;
+  }
+
+  .jeremy-btns {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 3rem 4rem 2rem 4rem;
+    margin-top: -1rem;
+    height: 100%;
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .box-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .box-container {
+    grid-template-columns: 1fr;
+  }
+
+  .box {
+    width: 100%;
+  }
+
+  .attribution {
+    font-size: 1.2rem;
+  }
+}

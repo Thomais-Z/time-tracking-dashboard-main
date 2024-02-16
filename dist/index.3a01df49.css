@@ -1,0 +1,268 @@
+:root {
+  --bg-dark-blue: #0f1424;
+  --dark-blue: #1c1f4a;
+  --primary-blue: #5847eb;
+  --blue: #393e74;
+  --pale-blue: #bdc1ff;
+  --white: #fff;
+  --work: #ff8c66;
+  --play: #56c2e6;
+  --study: #ff5c7c;
+  --exercise: #4acf81;
+  --social: #7536d3;
+  --self-care: #f1c65b;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--bg-dark-blue);
+  font-family: Rubik, sans-serif;
+  font-size: 1.8rem;
+}
+
+.container {
+  gap: 1em;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto 2rem;
+  padding-top: 2em;
+  display: flex;
+}
+
+.box-container {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1em;
+  display: grid;
+}
+
+.jeremy-container {
+  width: 22rem;
+}
+
+.jeremy-info {
+  background-color: var(--primary-blue);
+  border-radius: 9px;
+  padding: 2rem;
+  position: relative;
+}
+
+.jeremy-img {
+  border: 2px solid var(--white);
+  border-radius: 50%;
+  width: 6rem;
+  margin-bottom: 3rem;
+}
+
+.report {
+  color: var(--pale-blue);
+  margin-bottom: .5rem;
+  font-size: 1.2rem;
+}
+
+.name {
+  color: var(--white);
+  margin-bottom: 6rem;
+  font-size: 3.2rem;
+  font-weight: 300;
+}
+
+.jeremy-btns {
+  background-color: var(--dark-blue);
+  z-index: -1;
+  border-radius: 9px;
+  flex-direction: column;
+  gap: 1.8rem;
+  margin-top: -2rem;
+  padding: 4rem 2rem 3rem;
+  display: flex;
+}
+
+.btn {
+  color: var(--pale-blue);
+  font-size: 1.4rem;
+  text-decoration: none;
+  transition: all .2s;
+}
+
+.btn:hover {
+  color: var(--white);
+}
+
+.box {
+  width: 22rem;
+}
+
+.icon {
+  z-index: -1;
+  margin-top: -1rem;
+}
+
+.icon-exercise {
+  margin-top: -.5rem;
+}
+
+.icon-bg {
+  text-align: end;
+  border-top-left-radius: 9px;
+  border-top-right-radius: 9px;
+  height: 5rem;
+  padding: 0 2rem;
+  overflow: hidden;
+}
+
+.icon-bg-work {
+  background-color: var(--work);
+}
+
+.icon-bg-play {
+  background-color: var(--play);
+}
+
+.icon-bg-study {
+  background-color: var(--study);
+}
+
+.icon-bg-exercise {
+  background-color: var(--exercise);
+}
+
+.icon-bg-social {
+  background-color: var(--social);
+}
+
+.icon-bg-self-care {
+  background-color: var(--self-care);
+}
+
+.time-tracking-box {
+  background-color: var(--dark-blue);
+  border-radius: 9px;
+  margin-top: -1rem;
+  padding: 2rem;
+  transition: all .2s;
+  position: relative;
+}
+
+.time-tracking-box:hover {
+  background-color: var(--blue);
+  cursor: pointer;
+}
+
+.title-box {
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
+  display: flex;
+}
+
+.title-box svg path:hover {
+  fill: var(--white);
+}
+
+.title {
+  color: var(--white);
+  font-weight: 500;
+}
+
+.current-time {
+  color: var(--white);
+  margin-bottom: .7rem;
+  font-size: 5rem;
+  font-weight: 300;
+}
+
+.previous-time {
+  color: var(--pale-blue);
+  margin-bottom: .5rem;
+  font-size: 1.4rem;
+}
+
+.active {
+  color: var(--white);
+}
+
+.attribution {
+  text-align: center;
+  color: var(--blue);
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+.attribution a {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+@media only screen and (width <= 950px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .jeremy-container {
+    align-items: center;
+    width: 100%;
+    display: flex;
+  }
+
+  .jeremy-info {
+    z-index: 3;
+    width: 100%;
+  }
+
+  .jeremy-btns {
+    z-index: 2;
+    justify-content: center;
+    height: 18rem;
+    margin-top: 0;
+    margin-left: -1rem;
+    padding: 3rem 9rem;
+  }
+
+  .jeremy-img, .name {
+    margin-bottom: 1rem;
+  }
+}
+
+@media only screen and (width <= 740px) {
+  .jeremy-container {
+    flex-direction: column;
+  }
+
+  .jeremy-btns {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    margin-top: -1rem;
+    margin-left: 0;
+    padding: 3rem 4rem 2rem;
+  }
+
+  .box-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (width <= 500px) {
+  .box-container {
+    grid-template-columns: 1fr;
+  }
+
+  .box {
+    width: 100%;
+  }
+
+  .attribution {
+    font-size: 1.2rem;
+  }
+}
+
+/*# sourceMappingURL=index.3a01df49.css.map */
