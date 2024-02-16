@@ -605,7 +605,6 @@ const monthly = function() {
     });
 };
 dailyBtn.addEventListener("click", ()=>{
-    // dailyBtn.classList.remove('non-active');
     dailyBtn.classList.add("active");
     weeklyBtn.classList.remove("active");
     monthlyBtn.classList.remove("active");
